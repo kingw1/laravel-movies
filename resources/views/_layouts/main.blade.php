@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
+
     <link rel="stylesheet" href="/css/main.css">
+    <livewire:styles>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -27,12 +30,7 @@
                 </li>
             </ul>
             <div class="flex flex-col md:flex-row items-center text-sm">
-                <div class="relative mt-3 md:mt-0">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-                    <div class="absolute top-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/VisualEditor_-_Icon_-_Search-big.svg" alt="" class="mt-1 ml-1">
-                    </div>
-                </div>
+                <livewire:search-dropdown/>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="#">
                         <img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8 h-8">
@@ -43,5 +41,7 @@
     </nav>
 
     @yield('content')
+
+    <livewire:scripts>
 </body>
 </html>
